@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SelfPos</title>
+    <style>
+        .container {
+            position: absolute;
+            right: 100px;
+            left: 100px;
+            top: 20px;
+            bottom: 20px;
+            border: 2px dashed #e1e1e1;
+        }
+
+        .blue {
+            background: #3679a5;
+        }
+
+        .red {
+            background: #a54325;
+        }
+
+        .teal {
+            background: #a8b8d2;
+        }
+
+        .yellow {
+            background: #d9d12f;
+        }
+
+        .green {
+            background: #67d955;
+        }
+
+        .bordered {
+            border: 1px dashed #313131;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="selfpos blue" data-align="right" data-valign="middle" data-width="30%" data-height="100%">
+        <div class="selfpos teal" data-width="100%" data-height="33.3333%">
+            <div class="selfpos yellow" data-width="50%"></div>
+        </div>
+        <div class="selfpos teal" data-v-offset="33.3333" data-width="100%" data-height="33.3333%">
+            <div class="bordered"></div>
+        </div>
+        <div class="selfpos teal" data-v-offset="66.6666" data-width="100%" data-height="33.3333%">
+            <div class="bordered"></div>
+        </div>
+    </div>
+    <div class="selfpos red" data-h-offset="0" data-width="30%" data-height="30%"></div>
+    <div class="selfpos yellow" data-v-offset="30" data-width="30%" data-height="40%"></div>
+    <div class="selfpos blue" data-v-offset="70" data-width="30%" data-height="30%"></div>
+    <div class="selfpos green" data-h-offset="30" data-width="40%"></div>
+</div>
+
+
+<script src="../src/js/selfpos.js"></script>
+<script>
+    new selfPos().init();
+</script>
+</body>
+</html>
